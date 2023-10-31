@@ -2,24 +2,71 @@ body {
   height: 100vh;
   background-image: url("../image/img2.jpg");
   background-size: cover;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 .container-fluid {
-  height: 400px;
+  height: fit-content;
   width: 500px;
   margin-top: 50px;
-  padding: 10px;
+
   background-color: rgb(243, 232, 232);
   box-shadow: 3px 3px 2px gray, -3px -3px 2px gray;
 }
-small {
-  display: none;
-}
-form {
-  /* background-color: aqua; */
+
+.form1 {
+  margin: 0;
+  padding: 0;
+  gap: 0;
 }
 .word {
   font-size: 19px;
+}
+
+.if {
+  font-size: 10px;
+}
+
+.inpt {
+  border: 1px solid rgb(180, 176, 176);
+  height: 25px;
+}
+.inp:hover {
+  border: none;
+}
+
+.inp:active {
+  border: none;
+}
+.radio {
+  display: flex;
+  gap: 5px;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/*  */
+.rbox {
+  display: none;
+}
+.radio {
+  margin-bottom: 0 !important;
+}
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999%;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding: 4px 5px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 20px;
+  color: #157145;
+  background-color: hwb(142 77% 5%);
+}
+
+input[type="checkbox"]:checked + label {
+  color: white;
+  background-color: #157145;
 }
