@@ -18,7 +18,8 @@
 
 
     <div class="container-fluid">
-        <button id="apply-btn" class="h6 px-4 py-2 border-none "> <a href="form1.php">ApplyNow </a></button>
+        <a href="form1.php"><button id="apply-btn" class="h6 px-4 py-2 border-none "> ApplyNow</button> </a>
+
 
 
     </div>

@@ -1,23 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Merriweather&family=Roboto+Slab:wght@300&family=Young+Serif&display=swap");
 body {
-  height: 100vh;
   background-image: url("../image/img2.jpg");
   background-size: cover;
   font-size: 15px;
   font-family: "Roboto Slab", serif;
+  min-height: 100vh;
 }
 .container-fluid {
-  height: fit-content;
-  width: 470px;
+  background-color: #ffb3c6;
   margin-top: 50px !important;
-
-  padding: 1px !important;
   box-shadow: 2px 2px 2px gray, -2px -2px 2px gray;
+  width: 445px !important;
+  padding: 0 !important;
+  border-radius: 5px;
+}
+.f-outer {
+  overflow: hidden;
+  background-color: rgb(43, 226, 67);
+  width: 100%;
+  /* padding: 5px; */
+  height: fit-content;
 }
 
-.form1 {
-  padding: 5px;
-  background-color: white;
+.f-outer form {
+  display: flex;
+  max-height: fit-content;
+  gap: 10px;
+  width: 520%;
+  background-color: #c8b6ff;
+}
+.coll1,
+.coll2,
+.coll3,
+.coll4,
+.coll5 {
+  all: unset;
+  padding: 10px;
+  width: 18% !important;
+  /* min-width: 100px; */
+  background-color: #fff;
+  /* transition: margin-left 0.3s ease-in-out !important; */
+  transition: margin-left 1s ease-in-out !important;
+  height: fit-content;
 }
 .word,
 .word1 {
@@ -31,6 +55,7 @@ body {
 }
 
 .if {
+  margin: 0;
   font-size: 10px;
   color: red !important;
 }
@@ -50,13 +75,11 @@ hr {
   font-weight: bold;
   margin-bottom: 2px;
 }
-
 .wpform-label {
   margin-top: 0;
   font-size: 12px;
   font-weight: 800;
 }
-
 input::placeholder {
   font-size: 10px;
 }
@@ -67,7 +90,6 @@ input::placeholder {
 .p {
   margin-bottom: 2px;
 }
-
 .pw {
   margin-top: 2px;
   margin-bottom: 3px;
@@ -80,7 +102,6 @@ input::placeholder {
 .inp:hover {
   border: none;
 }
-
 .inp:active {
   border: none;
 }
@@ -90,18 +111,15 @@ input::placeholder {
   font-size: 15px;
   margin-top: 3px;
 }
-
 /*  */
 .rbox {
   display: none;
 }
-
 .inck[type="checkbox"]:not(:checked),
 .inck[type="checkbox"]:checked {
   position: absolute;
   left: -9999%;
 }
-
 .inck[type="checkbox"] + label {
   display: inline-block;
   padding: 3px 3px;
@@ -111,21 +129,17 @@ input::placeholder {
   color: black;
   background-color: #d3edea;
 }
-
 .inck[type="checkbox"]:checked + label {
   color: white;
   background-color: #0b7a75;
   transition: 1s;
 }
-
 /*  */
-
 .rinput[type="radio"]:not(:checked),
 .rinput[type="radio"]:checked {
   position: absolute;
   left: -9999%;
 }
-
 .rinput[type="radio"] + label {
   display: inline-block;
   padding: 4px 5px;
@@ -135,7 +149,6 @@ input::placeholder {
   color: black;
   background-color: #d3edea;
 }
-
 .rinput[type="radio"]:checked + label {
   color: white;
   background-color: #0b7a75;
@@ -172,13 +185,12 @@ input::placeholder {
 }
 
 .inptt {
-  width: 438px;
+  /* width: 438px; */
   border: 1px solid rgb(180, 176, 176);
   height: 25px;
   margin-bottom: 5px;
 }
 
-/* 2form */
 .sub1 {
   display: flex;
   justify-content: flex-end;
@@ -200,6 +212,7 @@ input::placeholder {
 .cp {
   font-size: 10px;
   font-weight: 600;
+  /* background-color: #c8b6ff; */
   margin-bottom: 9px;
   color: rgb(71, 68, 68);
 }
