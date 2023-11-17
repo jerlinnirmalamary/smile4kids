@@ -7,18 +7,17 @@ body {
   min-height: 100vh;
 }
 .container-fluid {
-  background-color: #ffb3c6;
+  /* background-color: #ffb3c6; */
   margin-top: 50px !important;
-  box-shadow: 2px 2px 2px gray, -2px -2px 2px gray;
+  /* box-shadow: 2px 2px 2px gray, -2px -2px 2px gray; */
   width: 445px !important;
   padding: 0 !important;
   border-radius: 5px;
 }
 .f-outer {
   overflow: hidden;
-  background-color: rgb(43, 226, 67);
+  /* background-color: rgb(43, 226, 67); */
   width: 100%;
-  /* padding: 5px; */
   height: fit-content;
 }
 
@@ -27,7 +26,7 @@ body {
   max-height: fit-content;
   gap: 10px;
   width: 520%;
-  background-color: #c8b6ff;
+  /* background-color: #c8b6ff; */
 }
 .coll1,
 .coll2,
@@ -37,11 +36,9 @@ body {
   all: unset;
   padding: 10px;
   width: 18% !important;
-  /* min-width: 100px; */
   background-color: #fff;
-  /* transition: margin-left 0.3s ease-in-out !important; */
-  transition: margin-left 1s ease-in-out !important;
   height: fit-content;
+  animation: animi 500ms ease-in-out;
 }
 .word,
 .word1 {
@@ -56,6 +53,7 @@ body {
 
 .if {
   margin: 0;
+  /* display: none; */
   font-size: 10px;
   color: red !important;
 }
@@ -142,7 +140,7 @@ input::placeholder {
 }
 .rinput[type="radio"] + label {
   display: inline-block;
-  padding: 4px 5px;
+  padding: 4px 3px;
   font-size: 10px;
   font-weight: bold;
   border-radius: 20px;
@@ -183,7 +181,6 @@ input::placeholder {
   background-color: #2196f3;
   color: white;
 }
-
 .inptt {
   /* width: 438px; */
   border: 1px solid rgb(180, 176, 176);
@@ -213,7 +210,7 @@ input::placeholder {
   font-size: 10px;
   font-weight: 600;
   /* background-color: #c8b6ff; */
-  margin-bottom: 9px;
+  margin-bottom: 7px;
   color: rgb(71, 68, 68);
 }
 
@@ -224,11 +221,21 @@ input::placeholder {
 .inl {
   font-size: 12px;
   font-weight: bolder;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   color: black;
 }
 
 .red {
   font-size: 12px;
   font-weight: bolder;
+}
+
+/*  */
+@keyframes animi {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }

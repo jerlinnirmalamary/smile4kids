@@ -19,9 +19,9 @@
     <script src="./jqueryf/jquery-ui.js"></script>
 
     <!-- 3 -->
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <!--  -->
 
 </head>
@@ -32,7 +32,7 @@
         <!--  -->
         <div class="f-outer">
 
-            <form class="needs-validation rounded form1" novalidate>
+            <form class="needs-validation rounded form1" name="myForm" novalidate>
 
                 <!--  -->
                 <div class="col coll1">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="col-md-6 first">
                             <label for="validationCustom01" class="form-label">First name</label>
-                            <input type="text" class="form-control inpt" id="validationCustom01"
+                            <input type="text" class="form-control inpt " id="validationCustom01"
                                 placeholder="Enter First Name" required>
                             <div class="invalid-feedback if">
                                 Please enter currect firstname
@@ -51,7 +51,7 @@
 
                         <div class="col-md-6 first">
                             <label for="validationCustom02" class="form-label">surname</label>
-                            <input type="text" class="form-control inpt" id="validationCustom02"
+                            <input type="text" class="form-control inpt " id="validationCustom02"
                                 placeholder="Enter SurName" required>
                             <div class="invalid-feedback if">
                                 please enter correct surname.
@@ -224,7 +224,7 @@
                     <!--  -->
                     <div class="col-12 sub2">
                         <button class="btn pre_btn1" type="button">Previous</button>
-                        <button class="btn btn2 nextbtn2" type="button">Next</button>
+                        <button class="btn btn2 nextbtn1" type="button">Next</button>
                     </div>
 
                 </div>
@@ -360,7 +360,7 @@
 
                     <div class="col-12 sub3">
                         <button class="btn pre_btn2" type="button">Previous</button>
-                        <button class="btn btn3 nextbtn3" type="button">Next</button>
+                        <button class="btn btn3 nextbtn1" type="button">Next</button>
                     </div>
                 </div>
                 <!-- four -->
@@ -438,7 +438,7 @@
 
                         <div class="col-12 sub4">
                             <button class="btn pre_btn3" type="button">Previous</button>
-                            <button class="btn btn4 nextbtn4" type="button">Next</button>
+                            <button class="btn btn4 nextbtn1" type="button">Next</button>
                         </div>
 
                     </div>
@@ -515,12 +515,13 @@
     </div>
     <!--  -->
     <script src="./assets\js\form1.js"></script>
+
     <!--  -->
-    <!-- <script>
+    <script>
     $(function() {
         $("#datepicker").datepicker();
     });
-    </script> -->
+    </script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
   Array.prototype.slice.call(forms).forEach(function (form) {
     form.addEventListener(
       "submit",
-      function (event) {
+      (event) => {
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
@@ -21,7 +21,9 @@
 })();
 
 //
-
+const nameinput1 = document.getElementById("validationCustom01");
+const nameinput2 = document.getElementById("validationCustom02");
+const dateinput1 = document.getElementById("datepicker");
 //radio
 
 const radio1 = document.querySelector(".radio-btn1");
@@ -36,77 +38,85 @@ radio1.addEventListener("click", () => {
 });
 
 // // button
-const body = document.querySelector("body");
+
 const coll1 = document.querySelector(".coll1"); //
 const coll2 = document.querySelector(".coll2"); //
 const coll3 = document.querySelector(".coll3"); //
 const coll4 = document.querySelector(".coll4"); //
 const coll5 = document.querySelector(".coll5"); //
-const nextbtn1 = document.querySelector(".nextbtn1"); //
-// //
-const prebtn1 = document.querySelector(".pre_btn1");
-const nextbtn2 = document.querySelector(".nextbtn2"); //
+// // // // // //
+const nextbtn1 = document.querySelectorAll(".nextbtn1");
 
+// // // // // //
+// const prebtn1 = document.querySelector(".pre_btn1");
+// const prebtn2 = document.querySelector(".pre_btn2"); //
+// const prebtn3 = document.querySelector(".pre_btn3"); //
+// const prebtn4 = document.querySelector(".pre_btn4"); //
+// // //
+const submitbtn = document.querySelectorAll(".submitbtn"); // // // // // //
+//
+//
 // //
-const prebtn2 = document.querySelector(".pre_btn2"); //
-const nextbtn3 = document.querySelector(".nextbtn3"); //
-//
-const prebtn3 = document.querySelector(".pre_btn3"); //
-const nextbtn4 = document.querySelector(".nextbtn4"); //
-//
-const prebtn4 = document.querySelector(".pre_btn4"); //
-const submitbtn = document.querySelectorAll(".submitbtn");
-
 nextbtn1.addEventListener("click", () => {
-  if ((coll1.style.marginLeft = "-50px")) {
-    coll1.style.display = "none";
+  if (!nameinput1.checkValidity()) {
+    coll1.classList.add("was-validated");
+  } else if (!nameinput2.checkValidity()) {
+    coll1.classList.add("was-validated");
+  } else if (!dateinput1.checkValidity()) {
+    coll1.classList.add("was-validated");
   }
-}); //
-
-// //
-nextbtn2.addEventListener("click", () => {
-  if ((coll2.style.marginLeft = "-50px")) {
-    coll2.style.display = "none";
-  }
-}); //
-
-// //
-nextbtn3.addEventListener("click", () => {
-  if ((coll3.style.marginLeft = "-50px")) {
-    coll3.style.display = "none";
-  }
-}); //
-nextbtn4.addEventListener("click", () => {
-  if ((coll4.style.marginLeft = "-50px")) {
-    coll4.style.display = "none";
-  }
-}); //
-
-//
-//
-//
-
-prebtn1.addEventListener("click", () => {
-  if ((coll1.style.marginLeft = "0px")) {
-    coll1.style.display = "block";
-  }
-}); //
-prebtn2.addEventListener("click", () => {
-  if ((coll2.style.marginLeft = "-0px")) {
-    coll2.style.display = "block";
-  }
-}); //;
-
-// //
-prebtn3.addEventListener("click", () => {
-  if ((coll3.style.marginLeft = "-0px")) {
-    coll3.style.display = "block";
-  }
-}); //
-
-// //
-prebtn4.addEventListener("click", () => {
-  if ((coll4.style.marginLeft = "-0px")) {
-    coll4.style.display = "block";
-  }
+  //
+  // else if ((coll1.style.marginLeft = "-50px")) {
+  //   coll1.style.display = "none";
+  // }
 });
+
+//
+// nextbtn2.addEventListener("click", () => {
+//   if ((coll2.style.marginLeft = "-50px")) {
+//     coll2.style.display = "none";
+//   }
+// });
+//
+
+// nextbtn3.addEventListener("click", () => {
+//   if ((coll3.style.marginLeft = "-50px")) {
+//     coll3.style.display = "none";
+//   }
+// });
+//
+// nextbtn4.addEventListener("click", () => {
+//   if ((coll4.style.marginLeft = "-50px")) {
+//     coll4.style.display = "none";
+//   }
+// });
+//
+
+// // // // // // //
+// prebtn1.addEventListener("click", () => {
+//   if ((coll1.style.marginLeft = "0px")) {
+//     coll1.style.display = "block";
+//   }
+// });
+//
+// prebtn2.addEventListener("click", () => {
+//   if ((coll2.style.marginLeft = "-0px")) {
+//     coll2.style.display = "block";
+//   }
+// });
+
+//
+
+// prebtn3.addEventListener("click", () => {
+//   if ((coll3.style.marginLeft = "-0px")) {
+//     coll3.style.display = "block";
+//   }
+// });
+//
+
+// prebtn4.addEventListener("click", () => {
+//   if ((coll4.style.marginLeft = "-0px")) {
+//     coll4.style.display = "block";
+//   }
+// });
+// // // // // // //
