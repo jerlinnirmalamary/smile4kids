@@ -13,15 +13,16 @@
 
 #apply-btn {
   border: none;
-  background-color: #6dd3dd;
+  background: linear-gradient(90deg, teal, white);
+
   border-radius: 5px;
   color: white;
-  position: absolute;
-  top: -50px;
+  /* position: absolute;
+  top: -50px; */
 }
 
 #apply-btn:hover {
-  background: linear-gradient(90deg, teal, white);
+  background-color: #6dd3dd;
 }
 a {
   text-decoration: none;

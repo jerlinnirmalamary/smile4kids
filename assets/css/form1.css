@@ -8,8 +8,7 @@ body {
 }
 .container-fluid {
   /* background-color: #ffb3c6; */
-  margin-top: 50px !important;
-  /* box-shadow: 2px 2px 2px gray, -2px -2px 2px gray; */
+  margin-top: 30px !important;
   width: 445px !important;
   padding: 0 !important;
   border-radius: 5px;
@@ -24,7 +23,8 @@ body {
 .f-outer form {
   display: flex;
   max-height: fit-content;
-  gap: 10px;
+  gap: 9px;
+  margin: 3px;
   width: 520%;
   /* background-color: #c8b6ff; */
 }
@@ -38,8 +38,11 @@ body {
   width: 18% !important;
   background-color: #fff;
   height: fit-content;
-  animation: animi 500ms ease-in-out;
+  border-radius: 5px;
+  animation: animi 600ms ease-in-out;
+  box-shadow: 2px 2px 3px gray, -2px -2px 3px gray !important;
 }
+
 .word,
 .word1 {
   margin-top: 0;
@@ -181,7 +184,8 @@ input::placeholder {
   background-color: #2196f3;
   color: white;
 }
-.inptt {
+.inpt1,
+.inpt2 {
   /* width: 438px; */
   border: 1px solid rgb(180, 176, 176);
   height: 25px;
@@ -189,6 +193,7 @@ input::placeholder {
 }
 
 .sub1 {
+  margin-top: px;
   display: flex;
   justify-content: flex-end;
 }
@@ -196,6 +201,7 @@ input::placeholder {
 .sub3,
 .sub4,
 .sub5 {
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
 }
@@ -230,7 +236,20 @@ input::placeholder {
   font-weight: bolder;
 }
 
+.coll2 {
+  animation: animi1 600ms ease-in-out;
+}
+
 /*  */
+/* @keyframes animi {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+} */
+
 @keyframes animi {
   0% {
     transform: translateX(100%);

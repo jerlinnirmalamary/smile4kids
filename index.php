@@ -18,9 +18,7 @@
 
 
     <div class="container-fluid boxx">
-        <a href="form1.php"><button id="apply-btn" class="h6 px-4 py-2 border-none "> Click <br> ApplyNow</button> </a>
-
-
+        <a href="form1.php"><button id="apply-btn" class="h6 px-4 py-2 border-none ">ApplyNow</button> </a>
 
     </div>
 

@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="./assets/css/form1.css">
 
     <!-- jquery link -->
-    <link rel="stylesheet" href="./jqueryf/jquery-ui.css">
-    <script src="./jqueryf/jquery-ui.js"></script>
+    <!-- <link rel="stylesheet" href="./jqueryf/jquery-ui.css"> -->
+    <!-- <script src="./jqueryf/jquery-ui.js"></script> -->
 
     <!-- 3 -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
     <!--  -->
 
 </head>
@@ -41,9 +41,11 @@
                         <div class="word">Panjabi/TEENS CLASSES (11 TO 19 YEARS OLD) <br> <span>Student Details</span>
                         </div>
                         <div class="col-md-6 first">
-                            <label for="validationCustom01" class="form-label">First name</label>
-                            <input type="text" class="form-control inpt " id="validationCustom01"
-                                placeholder="Enter First Name" required>
+                            <label for="validationCustom01" class="form-label" id="validationCustom01">First
+                                name</label>
+                            <input type="text" class="form-control inpt1 " id="validationCustom01"
+                                placeholder="Enter First Name" required name="fname" pattern="^[^0-9]+$" minlength="3"
+                                maxlength="30">
                             <div class="invalid-feedback if">
                                 Please enter currect firstname
                             </div>
@@ -51,8 +53,9 @@
 
                         <div class="col-md-6 first">
                             <label for="validationCustom02" class="form-label">surname</label>
-                            <input type="text" class="form-control inpt " id="validationCustom02"
-                                placeholder="Enter SurName" required>
+                            <input type="text" class="form-control inpt2 " id="validationCustom02"
+                                placeholder="Enter SurName" required name="sname" pattern="^[^0-9]+$" minlength="3"
+                                maxlength="30">
                             <div class="invalid-feedback if">
                                 please enter correct surname.
                             </div>
@@ -153,7 +156,7 @@
 
 
                     <div class="col-12 sub1">
-                        <button class="btn btn1 nextbtn1" type="submit">Next</button>
+                        <button class="btn btn1 nextbtn1" type="button">Next</button>
                     </div>
 
                 </div>
@@ -167,16 +170,18 @@
                         </div>
                         <div class="col-md-6 first1">
                             <label for="validationCustom01" class="form-label">First name</label>
-                            <input type="text" class="form-control inpt" id="validationCustom01"
-                                placeholder="Enter First Name" required>
+                            <input type="text" class="form-control inpt1" id="validationCustom01"
+                                placeholder="Enter First Name" name="fname2" pattern="^[^0-9]+$" minlength="3"
+                                maxlength="30" required>
                             <div class="invalid-feedback if">
                                 please enter correct firstname.
                             </div>
                         </div>
                         <div class="col-md-6 first1">
                             <label for="validationCustom02" class="form-label">surname</label>
-                            <input type="text" class="form-control inpt" id="validationCustom02"
-                                placeholder="Enter SurName" required>
+                            <input type="text" class="form-control inpt2" id="validationCustom02"
+                                placeholder="Enter SurName" name="sname2" pattern="^[^0-9]+$" minlength="3"
+                                maxlength="30" required>
                             <div class="invalid-feedback if">
                                 please enter correct surname.
                             </div>
@@ -187,8 +192,8 @@
 
                     <div class="mb-3">
                         <label for="validationTextarea" class="form-label">Address</label>
-                        <textarea class="form-control " id="validationTextarea" placeholder="Enter your recent address"
-                            required></textarea>
+                        <textarea class="form-control " minlength="10" maxlength="40" id="validationTextarea"
+                            placeholder="Enter your recent address" required></textarea>
                         <div class="invalid-feedback if">
                             Enter your recent address.
                         </div>
@@ -200,7 +205,8 @@
                     <div class="form-label">Email Address</div>
 
                     <div class="form-group">
-                        <input type="email" class="form-control" id="..." placeholder="enter Email" required />
+                        <input type="email" class="form-control emaill" placeholder="enter Email" name="emails"
+                            maxlength="25" required />
                         <div class="invalid-feedback if">
                             please enter correct email.
                         </div>
@@ -211,13 +217,15 @@
                     <div class="form-group">
 
                         <label for="phone_no">Phone Number</label>
-                        <input type="text" name="num" data-validation="number"
-                            data-validation-allowing="negative,number" input name="color" data-validation="number"
-                            datavalidation-ignore="$" required="required" class="form-control" id="phone_no"
-                            placeholder="Enter Phone Number">
+                        <!--  -->
+                        <input type="text" name="number1" data-validation="number"
+                            data-validation-allowing="negative,number" input name="color" datavalidation-ignore="$"
+                            required="required" class="form-control numbers" id="phone_no" minlength="10" maxlength="10"
+                            pattern="^[^a-z]+$" placeholder="Enter Phone Number" required />
                         <div class="invalid-feedback if">
                             please enter Phone Number.
                         </div>
+                        <!--  -->
                     </div>
 
 
@@ -247,8 +255,9 @@
                                 obtained or
                                 acquired
                                 by my child as a result of subscribing the course/s under Smile 4 Kids Ltd.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck1" required>
-                            <label class="inl" for="invalidCheck1">
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck1" name="check1" required
+                                checked>
+                            <label class="inl" for="invalidCheck1" checked>
                                 I Agree
                             </label>
                             <div class="invalid-feedback if">
@@ -268,7 +277,8 @@
                                 had subscribed the course with Smile 4 Kids ltd and shall at all times be used solely by
                                 my
                                 child only.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck2" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck2" name="check2" required
+                                checked>
                             <label class="inl" for="invalidCheck2">
                                 I Agree
                             </label>
@@ -290,7 +300,8 @@
                                 of
                                 my failure to protect the course materials as mentioned above with my best endeavours.
                             </p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck3" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck3" name="check3" required
+                                checked>
                             <label class="inl" for="invalidCheck3">
                                 I Agree
                             </label>
@@ -304,7 +315,8 @@
                         <div class="form-check">
 
                             <p class="cp">I will endeavour to speak Panjabi to my child as part of their homework.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck4" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck4" name="check4" required
+                                checked>
                             <label class="inl" for="invalidCheck4">
                                 I Agree
                             </label>
@@ -324,7 +336,8 @@
                                 clauses in the agreement and NDA should they prefer not to return a signed copy of such
                                 documents
                                 and the student attends a class.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck5" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck5" name="check5" required
+                                checked>
                             <label class="inl" for="invalidCheck5">
                                 I Agree
                             </label>
@@ -345,7 +358,8 @@
                                 my
                                 child
                                 individually.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck6" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck6" name="check6" required
+                                checked>
                             <label class="inl" for="invalidCheck6">
                                 I Agree
                             </label>
@@ -379,7 +393,8 @@
                                 to
                                 supervise my child individually.
                             </p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck7" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck7" name="check7" required
+                                checked>
                             <label class="inl" for="invalidCheck7">
                                 I Agree
                             </label>
@@ -395,7 +410,8 @@
                                 and
                                 will be
                                 bound by all the terms and conditions and policies, on the SMILE 4 kids website.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck8" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck8" name="check8" required
+                                checked>
                             <label class="inl" for="invalidCheck8">
                                 I Agree
                             </label>
@@ -409,7 +425,8 @@
                         <div class="form-check">
 
                             <p class="cp">I understand that termly fees once paid are non-refundable.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck9" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck9" name="check9" required
+                                checked>
                             <label class="inl" for="invalidCheck9">
                                 I Agree
                             </label>
@@ -437,7 +454,7 @@
                         <!-- sub4 -->
 
                         <div class="col-12 sub4">
-                            <button class="btn pre_btn3" type="button">Previous</button>
+                            <button class="btn pre_btn3" id="Previous" type="button">Previous</button>
                             <button class="btn btn4 nextbtn1" type="button">Next</button>
                         </div>
 
@@ -456,7 +473,8 @@
                             <p class="cp">I agree to reading all policies on SMILE 4 kids website including
                                 Health/safety,
                                 Safeguarding, Online Safety T’s and C’s and Privacy Policy.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck10" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck10" name="check10" required
+                                checked>
                             <label class="inl" for="invalidCheck10">
                                 I Agree
                             </label>
@@ -471,7 +489,8 @@
                             <p class="cp">I accept that no refund or partial refund will be given if a student leaves,
                                 part
                                 term.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck11" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck11" name="check11" required
+                                checked>
                             <label class="inl" for="invalidCheck11">
                                 I Agree
                             </label>
@@ -487,7 +506,8 @@
                             <p class="cp">I accept that any missed classes cannot be replaced/accommodated, on
                                 alternative
                                 dates.</p>
-                            <input class="inputc" type="checkbox" value="" id="invalidCheck12" required>
+                            <input class="inputc" type="checkbox" value="" id="invalidCheck12" name="check12" required
+                                checked>
                             <label class="inl" for="invalidCheck12">
                                 I Agree
                             </label>
@@ -499,17 +519,11 @@
                         <!-- sub4 -->
 
                         <div class="col-12 sub5">
-                            <button class="btn pre_btn4" type="button">Previous</button>
+                            <button class="btn pre_btn4" type="button" id="Previous">Previous</button>
                             <button class="btn btn5 submitbtn" type="submit">Apply</button>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
             </form>
         </div>
     </div>
@@ -517,11 +531,11 @@
     <script src="./assets\js\form1.js"></script>
 
     <!--  -->
-    <script>
+    <!-- <script>
     $(function() {
         $("#datepicker").datepicker();
     });
-    </script>
+    </script> -->
 </body>
 
 </html>
