@@ -77,11 +77,12 @@ const preBtn2 = document.querySelector(".pre_btn2");
 const preBtn3 = document.querySelector(".pre_btn3");
 const preBtn4 = document.querySelector(".pre_btn4");
 // // // // // //
-const submitbtn = document.querySelectorAll(".submitbtn"); // // // // //
+const submitbtn = document.querySelector(".submitbtn"); // // // // //
 //
 
-var form = document.forms.myForm;
-// console.log("form1", form);
+// var form = document.forms.form;
+const form = document.getElementById("form");
+//console.log("form1", form);
 //
 
 //
@@ -204,24 +205,24 @@ for (var i = 0; i < nextbtn1.length; i++) {
 
   //
   //five
-  nextbtn1[4].addEventListener("click", () => {
-    var check10 = form.elements.check10;
-    var check11 = form.elements.check11;
-    var check12 = form.elements.check12;
+  // nextbtn1[4].addEventListener("click", () => {
+  //   var check10 = form.elements.check10;
+  //   var check11 = form.elements.check11;
+  //   var check12 = form.elements.check12;
 
-    if (check10.checked == false) {
-      console.log("checked10");
-      coll5.classList.add("was-validated");
-    } else if (check11.checked == false) {
-      console.log("checked11");
-      coll5.classList.add("was-validated");
-    } else if (check12.checked == false) {
-      console.log("checked12");
-      coll5.classList.add("was-validated");
-    } else {
-      coll5.style.display = "block";
-    }
-  });
+  //   if (check10.checked == false) {
+  //     console.log("checked10");
+  //     coll5.classList.add("was-validated");
+  //   } else if (check11.checked == false) {
+  //     console.log("checked11");
+  //     coll5.classList.add("was-validated");
+  //   } else if (check12.checked == false) {
+  //     console.log("checked12");
+  //     coll5.classList.add("was-validated");
+  //   } else {
+  //     coll5.style.display = "block";
+  //   }
+  // });
 
   //
 
@@ -231,3 +232,71 @@ for (var i = 0; i < nextbtn1.length; i++) {
 }
 
 //
+
+//LOCAL STORAGE:
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  var forms = new FormData(document.getElementById("form"));
+  //
+  console.log(forms);
+
+  const fname = document.querySelector(".inpt1").value;
+  //console.log(fname);
+  // console.log(typeof fname);
+  const sname = document.querySelector(".inpt2").value;
+  // console.log(sname);
+  const radioBtn1 = document.querySelector("#student").value;
+  // console.log(radioBtn1);
+  const radioBtn2 = document.querySelector("#students").value;
+  // console.log(radioBtn2);
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  //console.log(checkboxes);
+  const dateinpt = document.querySelector(".inptt").value;
+  // console.log(dateinpt);
+  const cradio1 = document.querySelector("#radio_1").value;
+  // console.log(cradio1);
+  const cradio2 = document.querySelector("#radio_2").value;
+  // console.log(cradio2);
+  const cradio3 = document.querySelector("#radio_3").value;
+  // console.log(cradio3);
+  const gradio1 = document.querySelector(".ginput1").value;
+  // console.log(gradio1);
+  const gradio2 = document.querySelector(".ginput2").value;
+  // console.log(gradio2);
+  //
+  const fname2 = document.querySelector(".inpt3").value;
+  // console.log(fname2);
+  const sname2 = document.querySelector(".inpt4").value;
+  // console.log(sname2);
+  const Textarea = document.getElementById("validationTextarea").value;
+  // console.log(Textarea);
+  const emaills = document.getElementById("emails").value;
+  // console.log(emaills);
+  const phone_no = document.getElementById("phone_no").value;
+  // console.log(phone_no);
+  //
+  const alldatas = {
+    FirstName1: fname,
+    SurName1: sname,
+    sradioBtn1: radioBtn1,
+    sradioBtn2: radioBtn2,
+    datePicker: dateinpt,
+    Category1: cradio1,
+    Category2: cradio2,
+    Category3: cradio3,
+    GenderM: gradio1,
+    GenderF: gradio2,
+    FirstName1: fname,
+    SurName1: sname2,
+    textarea: Textarea,
+    emaillid: emaills,
+    PhoneNumber: phone_no,
+  };
+  saveFormData(alldatas);
+});
+
+function saveFormData(alldatas) {
+  const storedFormData = JSON.parse(localStorage.getItem("alldatas")) || [];
+  storedFormData.push(alldatas);
+  localStorage.setItem("alldatas", JSON.stringify(storedFormData));
+}

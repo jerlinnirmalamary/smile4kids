@@ -185,7 +185,9 @@ input::placeholder {
   color: white;
 }
 .inpt1,
-.inpt2 {
+.inpt2,
+.inpt3,
+.inpt4 {
   /* width: 438px; */
   border: 1px solid rgb(180, 176, 176);
   height: 25px;

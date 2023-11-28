@@ -1,3 +1,9 @@
+<?php
+// if(isset($_POST['submitform'])){
+//     echo '<pre>';
+//     print_r($_POST);
+// }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,13 +21,13 @@
     <link rel="stylesheet" href="./assets/css/form1.css">
 
     <!-- jquery link -->
-    <!-- <link rel="stylesheet" href="./jqueryf/jquery-ui.css"> -->
-    <!-- <script src="./jqueryf/jquery-ui.js"></script> -->
+    <link rel="stylesheet" href="./jqueryf/jquery-ui.css">
+    <script src="./jqueryf/jquery-ui.js"></script>
 
     <!-- 3 -->
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
-    <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <!--  -->
 
 </head>
@@ -32,7 +38,7 @@
         <!--  -->
         <div class="f-outer">
 
-            <form class="needs-validation rounded form1" name="myForm" novalidate>
+            <form action="" method="POST" class="needs-validation rounded form1" name="myForm" novalidate id="form">
 
                 <!--  -->
                 <div class="col coll1">
@@ -45,7 +51,7 @@
                                 name</label>
                             <input type="text" class="form-control inpt1 " id="validationCustom01"
                                 placeholder="Enter First Name" required name="fname" pattern="^[^0-9]+$" minlength="3"
-                                maxlength="30">
+                                maxlength="30" />
                             <div class="invalid-feedback if">
                                 Please enter currect firstname
                             </div>
@@ -55,7 +61,7 @@
                             <label for="validationCustom02" class="form-label">surname</label>
                             <input type="text" class="form-control inpt2 " id="validationCustom02"
                                 placeholder="Enter SurName" required name="sname" pattern="^[^0-9]+$" minlength="3"
-                                maxlength="30">
+                                maxlength="30" />
                             <div class="invalid-feedback if">
                                 please enter correct surname.
                             </div>
@@ -68,11 +74,11 @@
                     <!-- radio -->
                     <div class="wd form-label">You Are</div>
                     <div class="radio">
-                        <input type="radio" class="radio-btn1" id="student" name="student" value="radio" checked>
+                        <input type="radio" class="radio-btn1" id="student" name="student" checked />
                         <label for="student" class="wpform-label">New Student</label><br>
 
-                        <input type="radio" class="radio-btn2" id="students" name="student" value="radio">
-                        <label for="students" class="wpform-label">Existing Student</label>
+                        <input type="radio" class="radio-btn2" id="students" name="student" /><label for="students"
+                            class="wpform-label">Existing Student</label>
                         <br>
                     </div>
                     <!--  -->
@@ -81,40 +87,40 @@
                         <hr style="margin-top:0;">
                         <p class="pw form-label"> What terms have you bought already ?</p>
 
-                        <input class="inck" type="checkbox" id="check_1" name="check_1" value="check_1" checked>
+                        <input class="inck" type="checkbox" id="check_1" name="check_1" value="check_1" checked />
                         <label class="labck" for="check_1">Team 1</label>
 
-                        <input class="inck" type="checkbox" id="check_2" name="check_2" value="check_2">
+                        <input class="inck" type="checkbox" id="check_2" name="check_2" value="check_2" />
                         <label class="labck" for="check_2">Team 2</label>
 
-                        <input class="inck" type="checkbox" id="check_3" name="check_3" value="check_3">
+                        <input class="inck" type="checkbox" id="check_3" name="check_3" value="check_3" />
                         <label class="labck" for="check_3">Team 3</label>
 
-                        <input class="inck" type="checkbox" id="check_4" name="check_4" value="check_4">
+                        <input class="inck" type="checkbox" id="check_4" name="check_4" value="check_4" />
                         <label class="labck" for="check_4">Team 4</label>
 
-                        <input class="inck" type="checkbox" id="check_5" name="check_5" value="check_5">
+                        <input class="inck" type="checkbox" id="check_5" name="check_5" value="check_5" />
                         <label class="labck" for="check_5">Team 5</label>
 
-                        <input class="inck" type="checkbox" id="check_6" name="check_6" value="check_6">
+                        <input class="inck" type="checkbox" id="check_6" name="check_6" value="check_6" />
                         <label class="labck" for="check_6">Team 6</label>
 
-                        <input class="inck" type="checkbox" id="check_7" name="check_7" value="check_7">
+                        <input class="inck" type="checkbox" id="check_7" name="check_7" value="check_7" />
                         <label class="labck" for="check_7">Team 7</label>
 
-                        <input class="inck" type="checkbox" id="check_8" name="check_8" value="check_8">
+                        <input class="inck" type="checkbox" id="check_8" name="check_8" value="check_8" />
                         <label class="labck" for="check_8">Team 8</label>
 
-                        <input class="inck" type="checkbox" id="check_9" name="check_9" value="check_9">
+                        <input class="inck" type="checkbox" id="check_9" name="check_9" value="check_9" />
                         <label class="labck" for="check_9">Team 9</label>
 
-                        <input class="inck" type="checkbox" id="check_10" name="check_10" value="check_10">
+                        <input class="inck" type="checkbox" id="check_10" name="check_10" value="check_10" />
                         <label class="labck" for="check_10">Team 10</label>
 
-                        <input class="inck" type="checkbox" id="check_11" name="check_11" value="check_11">
+                        <input class="inck" type="checkbox" id="check_11" name="check_11" value="check_11" />
                         <label class="labck" for="check_11">Team 11</label>
 
-                        <input class="inck" type="checkbox" id="check_12" name="check_12" value="check_12">
+                        <input class="inck" type="checkbox" id="check_12" name="check_12" value="check_12" />
                         <label class="labck" for="check_12">Team 12</label>
                     </div>
                     <!--  -->
@@ -124,7 +130,7 @@
                         <!--  -->
                         <div class="col-md-12">
                             <label for="validationCustom01" class="form-label">Date of Birth</label>
-                            <input type="text" id="datepicker" class="form-control inptt" required>
+                            <input type="text" id="datepicker" class="form-control inptt" name="DOB" required />
                             <div class="invalid-feedback if">
                                 please pick your date of birth.
                             </div>
@@ -135,22 +141,22 @@
                     <div class="Redio">
                         <div class="form-label">Select Child Category</div>
                         <!--  -->
-                        <input class="rinput" type="radio" id="radio_1" name="radio_1" checked>
+                        <input class="rinput" type="radio" id="radio_1" name="radio_1" checked />
                         <label class="inputL" for="radio_1"> first child</label>
 
-                        <input class="rinput" type="radio" id="radio_2" name="radio_1">
+                        <input class="rinput" type="radio" id="radio_2" name="radio_1" />
                         <label class="inputL" for="radio_2"> second child</label>
 
-                        <input class="rinput" type="radio" id="radio_3" name="radio_1">
+                        <input class="rinput" type="radio" id="radio_3" name="radio_1" />
                         <label class="inputL" for="radio_3"> D of E</label>
                         <hr>
                     </div>
                     <!--  radio-->
                     <div class="gender_Radio">
                         <p class="p form-label">Gender</p>
-                        <input class="input" type="radio" id="radiobtn1" name="radio" value="radio" checked>
+                        <input class="ginput1" type="radio" id="radiobtn1" name="gradio1" value="radio" checked />
                         <label class="input" for="radiobtn1">Male</label>
-                        <input class="input" type="radio" id="radiobtn2" name="radio" value="radio">
+                        <input class="ginput2" type="radio" id="radiobtn2" name="gradio2" value="radio" />
                         <label class="input" for="radiobtn2">Female</label>
                     </div>
 
@@ -170,18 +176,18 @@
                         </div>
                         <div class="col-md-6 first1">
                             <label for="validationCustom01" class="form-label">First name</label>
-                            <input type="text" class="form-control inpt1" id="validationCustom01"
+                            <input type="text" class="form-control inpt3" id="validationCustom01"
                                 placeholder="Enter First Name" name="fname2" pattern="^[^0-9]+$" minlength="3"
-                                maxlength="30" required>
+                                maxlength="30" required />
                             <div class="invalid-feedback if">
                                 please enter correct firstname.
                             </div>
                         </div>
                         <div class="col-md-6 first1">
                             <label for="validationCustom02" class="form-label">surname</label>
-                            <input type="text" class="form-control inpt2" id="validationCustom02"
+                            <input type="text" class="form-control inpt4" id="validationCustom02"
                                 placeholder="Enter SurName" name="sname2" pattern="^[^0-9]+$" minlength="3"
-                                maxlength="30" required>
+                                maxlength="30" required />
                             <div class="invalid-feedback if">
                                 please enter correct surname.
                             </div>
@@ -193,7 +199,7 @@
                     <div class="mb-3">
                         <label for="validationTextarea" class="form-label">Address</label>
                         <textarea class="form-control " minlength="10" maxlength="40" id="validationTextarea"
-                            placeholder="Enter your recent address" required></textarea>
+                            placeholder="Enter your recent address" name="textArea" required></textarea>
                         <div class="invalid-feedback if">
                             Enter your recent address.
                         </div>
@@ -206,7 +212,7 @@
 
                     <div class="form-group">
                         <input type="email" class="form-control emaill" placeholder="enter Email" name="emails"
-                            maxlength="25" required />
+                            id="emails" maxlength="25" required />
                         <div class="invalid-feedback if">
                             please enter correct email.
                         </div>
@@ -256,7 +262,7 @@
                                 acquired
                                 by my child as a result of subscribing the course/s under Smile 4 Kids Ltd.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck1" name="check1" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck1" checked>
                                 I Agree
                             </label>
@@ -278,7 +284,7 @@
                                 my
                                 child only.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck2" name="check2" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck2">
                                 I Agree
                             </label>
@@ -301,7 +307,7 @@
                                 my failure to protect the course materials as mentioned above with my best endeavours.
                             </p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck3" name="check3" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck3">
                                 I Agree
                             </label>
@@ -316,7 +322,7 @@
 
                             <p class="cp">I will endeavour to speak Panjabi to my child as part of their homework.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck4" name="check4" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck4">
                                 I Agree
                             </label>
@@ -337,7 +343,7 @@
                                 documents
                                 and the student attends a class.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck5" name="check5" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck5">
                                 I Agree
                             </label>
@@ -359,7 +365,7 @@
                                 child
                                 individually.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck6" name="check6" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck6">
                                 I Agree
                             </label>
@@ -394,7 +400,7 @@
                                 supervise my child individually.
                             </p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck7" name="check7" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck7">
                                 I Agree
                             </label>
@@ -411,7 +417,7 @@
                                 will be
                                 bound by all the terms and conditions and policies, on the SMILE 4 kids website.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck8" name="check8" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck8">
                                 I Agree
                             </label>
@@ -426,7 +432,7 @@
 
                             <p class="cp">I understand that termly fees once paid are non-refundable.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck9" name="check9" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck9">
                                 I Agree
                             </label>
@@ -445,9 +451,9 @@
                                 when
                                 asked, (for use on SMILE 4 KIDS website or social media), prior to use.</p>
 
-                            <input type="radio" id="radio1" name="radio1" checked>
+                            <input type="radio" id="radio1" name="radio1" checked />
                             <label class="red" for="radio1">YES</label> <br>
-                            <input type="radio" id="radio2" name="radio1">
+                            <input type="radio" id="radio2" name="radio2" />
                             <label class="red" for="radio2">NO</label>
                         </div>
 
@@ -474,7 +480,7 @@
                                 Health/safety,
                                 Safeguarding, Online Safety T’s and C’s and Privacy Policy.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck10" name="check10" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck10">
                                 I Agree
                             </label>
@@ -490,7 +496,7 @@
                                 part
                                 term.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck11" name="check11" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck11">
                                 I Agree
                             </label>
@@ -507,7 +513,7 @@
                                 alternative
                                 dates.</p>
                             <input class="inputc" type="checkbox" value="" id="invalidCheck12" name="check12" required
-                                checked>
+                                checked />
                             <label class="inl" for="invalidCheck12">
                                 I Agree
                             </label>
@@ -520,7 +526,7 @@
 
                         <div class="col-12 sub5">
                             <button class="btn pre_btn4" type="button" id="Previous">Previous</button>
-                            <button class="btn btn5 submitbtn" type="submit">Apply</button>
+                            <button type="submit" class="btn btn5 submitbtn" name="submitform">Apply</button>
                         </div>
                     </div>
                 </div>
@@ -530,12 +536,13 @@
     <!--  -->
     <script src="./assets\js\form1.js"></script>
 
+
     <!--  -->
-    <!-- <script>
+    <script>
     $(function() {
         $("#datepicker").datepicker();
     });
-    </script> -->
+    </script>
 </body>
 
 </html>
